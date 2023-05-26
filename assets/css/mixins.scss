@@ -1,0 +1,9 @@
+@mixin card {
+    box-shadow: rgba(145, 145, 145, 0.12) 0px 1px 3px, rgba(133, 133, 133, 0.24) 0px 1px 2px;
+}
+
+@mixin darkMode {
+    background-color: #1a1a1a;
+    color: #fff !important;
+}
+

@@ -1,0 +1,201 @@
+/* Small devices (phones) */
+.s-1 {
+    width: 8.33%;
+  }
+  
+  .s-2 {
+    width: 16.66%;
+  }
+  
+  .s-3 {
+    width: 25%;
+  }
+  
+  .s-4 {
+    width: 33.33%;
+  }
+  
+  .s-5 {
+    width: 41.66%;
+  }
+  
+  .s-6 {
+    width: 50%;
+  }
+  
+  .s-7 {
+    width: 58.33%;
+  }
+  
+  .s-8 {
+    width: 66.66%;
+  }
+  
+  .s-9 {
+    width: 75%;
+  }
+  
+  .s-10 {
+    width: 83.33%;
+  }
+  
+  .s-11 {
+    width: 91.66%;
+  }
+  
+  .s-12 {
+    width: 100%;
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 768px) {
+    .m-1 {
+      width: 8.33%;
+    }
+  
+    .m-2 {
+      width: 16.66%;
+    }
+  
+    .m-3 {
+      width: 25%;
+    }
+  
+    .m-4 {
+      width: 33.33%;
+    }
+  
+    .m-5 {
+      width: 41.66%;
+    }
+  
+    .m-6 {
+      width: 50%;
+    }
+  
+    .m-7 {
+      width: 58.33%;
+    }
+  
+    .m-8 {
+      width: 66.66%;
+    }
+  
+    .m-9 {
+      width: 75%;
+    }
+  
+    .m-10 {
+      width: 83.33%;
+    }
+  
+    .m-11 {
+      width: 91.66%;
+    }
+  
+    .m-12 {
+      width: 100%;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 1200px) {
+    .lg-1 {
+      width: 8.33%;
+    }
+  
+    .lg-2 {
+      width: 16.66%;
+    }
+  
+    .lg-3 {
+      width: 25%;
+    }
+  
+    .lg-4 {
+      width: 33.33%;
+    }
+  
+    .lg-5 {
+      width: 41.66%;
+    }
+  
+    .lg-6 {
+      width: 50%;
+    }
+  
+    .lg-7 {
+      width: 58.33%;
+    }
+  
+    .lg-8 {
+      width: 66.66%;
+    }
+  
+    .lg-9 {
+      width: 75%;
+    }
+  
+    .lg-10 {
+      width: 83.33%;
+    }
+  
+    .lg-11 {
+      width: 91.66%;
+    }
+  
+    .lg-12 {
+      width: 100%;
+    }
+  }
+
+  /* Extra Large devices */
+@media (min-width: 1600px) {
+    .xlg-1 {
+      width: 8.33%;
+    }
+  
+    .xlg-2 {
+      width: 16.66%;
+    }
+  
+    .xlg-3 {
+      width: 25%;
+    }
+  
+    .xlg-4 {
+      width: 33.33%;
+    }
+  
+    .xlg-5 {
+      width: 41.66%;
+    }
+  
+    .xlg-6 {
+      width: 50%;
+    }
+  
+    .xlg-7 {
+      width: 58.33%;
+    }
+  
+    .xlg-8 {
+      width: 66.66%;
+    }
+  
+    .xlg-9 {
+      width: 75%;
+    }
+  
+    .xlg-10 {
+      width: 83.33%;
+    }
+
+    .xlg-11 {
+      width: 91.66%;
+    }
+
+    .xlg-12 {
+      width: 100%;
+    }
+}
