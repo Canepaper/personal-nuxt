@@ -8,13 +8,6 @@
 			<Skill v-for="skill in skills" :data="skill"></Skill>
 		</div>
 
-		<h2> {{ secondHeading[language] }}</h2>
-		<p> {{ secondDescription[language] }}</p>
-
-		<div class="skills">
-			<Skill v-for="skill in noSkills" :data="skill"></Skill>
-		</div>
-
 
 </template>
 
@@ -107,54 +100,67 @@ export default {
 			skills: [
 				{
 					name: 'JavaScript',
+                    svg: 'javascript',
 					stars: 4
 				},
 				{
 					name: 'HTML',
+                    svg: 'html',
 					stars: 4
 				},
 				{
 					name: 'CSS',
+                    svg: 'css',
+					stars: 3
+				},
+                {
+					name: 'Node.JS',
+                    svg: 'nodejs',
 					stars: 3
 				},
 				{
 					name: 'Vue',
-					stars: 3
-				},
-				{
-					name: 'Node.JS',
+                    svg: 'vue',
 					stars: 3
 				},
 				{
 					name: 'Nuxt',
+                    svg: 'nuxt',
 					stars: 3
 				},
 				{
 					name: 'Vuetify',
+                    svg: 'vuetify',
 					stars: 3
 				},
 				{
 					name: 'Vuex/Pinia',
+                    svg: 'pinia',
 					stars: 2
 				},
                 {
 					name: 'Sass',
+                    svg: 'sass',
 					stars: 2
 				},
 				{
 					name: 'MongoDB',
+                    svg: 'mongodb',
 					stars: 2
 				},
 				{
 					name: 'Express',
+                    svg: 'express',
 					stars: 2
 				},
 				{
 					name: 'Git',
+                    svg: 'git',
 					stars: 2
 				},
 				{
 					name: 'TypeScript',
+                    svg: 'typescript',
 					stars: 1
 				},
 

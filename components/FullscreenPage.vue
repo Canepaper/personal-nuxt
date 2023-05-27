@@ -3,7 +3,10 @@
 		<div class="page-content">
 			<NuxtPage />
 		</div>
+        <Footer dark="true" />
 	</div>
+    
+
 </template>
 
 <script setup></script>
@@ -11,9 +14,11 @@
 <style lang="scss" scoped>
 .fullscreen-page {
 	min-height: calc(100vh - 80px);
-	padding: 0px 20px;
+	
 	// background: $page;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
 	color: $page;
 	width: 100%;
@@ -22,6 +27,7 @@
 }
 
 .page-content {
+    padding: 0px 20px;
 	animation: 0.5s ease-out 0s 1 appear;
     max-width: 2000px;
     width: 100%;
@@ -39,9 +45,13 @@
 @media (max-width: 1200px) {
 	.fullscreen-page {
 		min-height: calc(100vh - 60px);
-		padding: 0px 20px;
+		
 		margin: 0;
 		margin-top: 60px;
 	}
+
+    .page-content {
+        padding: 0px 20px;
+    }
 }
 </style>

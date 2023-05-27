@@ -54,3 +54,20 @@ body {
         color: $page !important;
     }
 }
+
+.socials {
+	display: flex;
+	margin: 5px 0px;
+
+	img {
+		width: 25px;
+		height: 25px;
+		margin: 0px 10px;
+		filter: invert(30%) sepia(5%) saturate(17%) hue-rotate(314deg)
+			brightness(101%) contrast(88%);
+	}
+
+	a {
+		position: relative;
+	}
+}

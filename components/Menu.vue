@@ -8,20 +8,6 @@
 					>menu</span
 				>
 			</div>
-
-			<div class="topnav-title"></div>
-
-			<div class="socials">
-				<a
-					:href="social.name"
-					target="_blank"
-					v-for="social in socials"
-				>
-					<img :src="`/images/${social.image}`" :alt="social.name" />
-					<span class="tooltip"> {{ social.tooltip }}</span>
-				</a>
-			</div>
-			<!-- spacer -->
 		</div>
 	</div>
 
@@ -248,7 +234,6 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
-	background-color: $page;
 	background-color: #eee;
 
 	min-width: 300px;
