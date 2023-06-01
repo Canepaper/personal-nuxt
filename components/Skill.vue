@@ -24,7 +24,7 @@ export default {
 <style scoped lang="scss">
 .skill {
 
-	margin: 30px;
+	
 	display: flex;
 	flex-direction: column;
 
@@ -54,6 +54,9 @@ export default {
 }
 
 .skill-wrapper {
+    padding: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
 }

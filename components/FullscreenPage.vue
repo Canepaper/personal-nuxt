@@ -13,7 +13,7 @@
 
 <style lang="scss" scoped>
 .fullscreen-page {
-	min-height: calc(100vh - 80px);
+	min-height: 100vh;
 	
 	// background: $page;
     
@@ -29,6 +29,7 @@
 .page-content {
     padding: 0px 20px;
 	animation: 0.5s ease-out 0s 1 appear;
+    flex: 1 1 auto;
     max-width: 2000px;
     width: 100%;
 }

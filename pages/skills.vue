@@ -54,8 +54,8 @@ export default {
 			},
 
 			description: {
-				en: 'I decided to compile a list of skills I have acquired over the years, the experience is rated from 1 to 5 stars.',
-				nl: 'Ik heb besloten om een lijst te maken van vaardigheden die ik heb opgedaan in de loop der jaren, de ervaring is beoordeeld van 1 tot 5 sterren.'
+				en: 'A list of skills I have acquired over the years, the experience is rated from 1 to 5 stars.',
+				nl: 'Een lijst van ervaringen die ik heb opgedaan in de loop der jaren, de ervaring is beoordeeld van 1 tot 5 sterren.'
 			},
 
 			noSkills: [
@@ -178,6 +178,5 @@ export default {
 	flex-direction: row;
 	flex-wrap: wrap;
     justify-content: center;
-	margin-bottom: 2rem;
 }
 </style>

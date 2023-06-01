@@ -101,7 +101,7 @@ export default {
 			},
 
 			pens: [
-				{
+            {
 					slug: "wrKdwR",
 					title: {
 						en: "Bouncy Input Range Sliders with Vue",
@@ -110,20 +110,12 @@ export default {
 					tags: ["Vue", "JavaScript"],
 				},
                 {
-                    slug: "poxqaJj",
+                    slug: "RweOdYO",
                     title: {
-                        en: "Animated Sidebar Vue3 (Web Tutorial Mockup)",
-                        nl: "Geanimeerde Sidebar Vue3 (Web Tutorial Mockup)"
+                        en: "Vue SignIn/Register Form with Validation",
+                        nl: "Vue SignIn/Register Formulier met Validatie",
                     },
-                    tags: ["Vue", "SCSS", "JavaScript"]
-                },
-                {
-                    slug: "ExpoXoV",
-                    title: {
-                        en: "Brand Carousel with Vue and CSS",
-                        nl: "Merk Carrousel met Vue en CSS",
-                    },
-                    tags: ["Vue", "JavaScript", "CSS"],
+                    tags: ["Vue", "JavaScript", "SCSS"]
                 },
                 {
 					slug: "vYVQeZw",
@@ -140,6 +132,22 @@ export default {
                         nl: "Vue 3 Tabs",
                     },
                     tags: ["Vue", "JavaScript", "SCSS"],
+                },
+                {
+                    slug: "ExpoXoV",
+                    title: {
+                        en: "Brand Carousel with Vue and CSS",
+                        nl: "Merk Carrousel met Vue en CSS",
+                    },
+                    tags: ["Vue", "JavaScript", "CSS"],
+                },
+                {
+                    slug: "poxqaJj",
+                    title: {
+                        en: "Animated Sidebar Vue3 (Web Tutorial Mockup)",
+                        nl: "Geanimeerde Sidebar Vue3 (Web Tutorial Mockup)"
+                    },
+                    tags: ["Vue", "SCSS", "JavaScript"]
                 },
 				{
 					slug: "OJbypGw",
@@ -188,7 +196,7 @@ export default {
 						nl: "Vuetify Timer - Cirkel Voortgang",
 					},
 					tags: ["Vue", "JavaScript", "Vuetify"],
-				}
+				},
 			],
 		};
 	},
