@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 	color: $page;
 	width: 100%;
 	font-family: "Roboto", sans-serif;

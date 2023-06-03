@@ -10,12 +10,15 @@
 				<div
 					class="pen-button"
 					:class="{ 'pen-button-selected': category.selected }"
-					@click="toggleCategory(category)"
+					@click="selectCategory(category)"
 				>
 					{{ category.name }}
 				</div>
 			</template>
 		</div>
+
+        <p v-if="language == 'en'">Showing {{ pensVisible }} of {{ pens.length }} demonstrations</p>
+        <p v-if="language == 'nl'">Toont {{ pensVisible }} van de {{ pens.length }} demonstraties</p>
 
 		<div class="pens">
 			<template v-for="pen in pens" :key="pen">
@@ -49,6 +52,16 @@ export default {
 	name: "codepen",
 
 	methods: {
+
+        selectCategory(selectedCategory){
+
+            for(let category of this.categories){
+                category.selected = false;
+            }
+
+            selectedCategory.selected = true;
+        },
+
 		toggleCategory(category) {
 			category.selected = !category.selected;
 			console.log(category);
@@ -64,6 +77,11 @@ export default {
 	},
 
 	computed: {
+
+        pensVisible(){
+            return this.pens.filter((pen) => this.categoryIsSelected(pen.tags)).length;
+        },
+
 		selectedCategories() {
 			return this.categories.filter((x) => x.selected).map((x) => x.name);
 		},
@@ -89,10 +107,10 @@ export default {
 
 			categories: [
 				{ name: "Vue", selected: true },
-				{ name: "JavaScript", selected: true },
-				{ name: "CSS", selected: true },
-				{ name: "SCSS", selected: true },
-				{ name: "Vuetify", selected: true },
+				{ name: "JavaScript", selected: false },
+				{ name: "CSS", selected: false },
+				{ name: "SCSS", selected: false },
+				{ name: "Vuetify", selected: false },
 			],
 
 			description: {
@@ -129,7 +147,7 @@ export default {
 					slug: "vYVQeZw",
 					title: {
 						en: "Vue 3 Expansion Panels",
-						nl: "Vue 3 Expansion Panels",
+						nl: "Vue 3 Expansion Panelen",
 					},
 					tags: ["Vue", "JavaScript", "SCSS"],
 				},
