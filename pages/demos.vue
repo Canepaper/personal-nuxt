@@ -101,7 +101,7 @@ export default {
 			},
 
 			pens: [
-            {
+                {
 					slug: "wrKdwR",
 					title: {
 						en: "Bouncy Input Range Sliders with Vue",
@@ -109,6 +109,14 @@ export default {
 					},
 					tags: ["Vue", "JavaScript"],
 				},
+                {
+                    slug: "MWPZQwy",
+                    title: {
+                        en: "Vue Comment Form with Warning Field",
+                        nl: "Vue Commentaar Formulier met Waarschuwingsveld",
+                    },
+                    tags: ["Vue", "JavaScript", "SCSS"]
+                }
                 {
                     slug: "RweOdYO",
                     title: {
