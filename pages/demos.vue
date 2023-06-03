@@ -116,7 +116,7 @@ export default {
                         nl: "Vue Commentaar Formulier met Waarschuwingsveld",
                     },
                     tags: ["Vue", "JavaScript", "SCSS"]
-                }
+                },
                 {
                     slug: "RweOdYO",
                     title: {
