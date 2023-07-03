@@ -6,14 +6,14 @@
 			a look at my <NuxtLink to="skills">skills</NuxtLink> to find out
 			what I can do. Check out my
 			<NuxtLink to="projects">Projects</NuxtLink> to see what I made in
-			the past.
+			the past. Hop over to my <NuxtLink to="demos">Demonstrations</NuxtLink> page to see some of my recent code snippets.
 		</p>
 		<p v-else>
 			Mijn naam is Jacob, ik ben een web developer met 3 jaar ervaring.
 			Bekijk mijn <NuxtLink to="skills">vaardigheden</NuxtLink> om te zien
 			wat ik kan. Bekijk mijn
 			<NuxtLink to="projects">projecten</NuxtLink> om te zien wat ik in
-			het verleden heb gemaakt.
+			het verleden heb gemaakt. Ga naar mijn <NuxtLink to="demos">demonstraties</NuxtLink> pagina om enkele van mijn recente code snippets te zien.
 		</p>
 		<p v-if="language == 'en'">
 			Contact me for a copy of my Resume.

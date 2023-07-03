@@ -11,12 +11,7 @@ body {
     color: $text-color;
     font-family: 'Kalam', cursive;
     box-sizing: border-box;
-    // background: url("/images/background.png") no-repeat center center fixed;
     background-color: #262626;
-    background-image: radial-gradient(50% 50% at top center,rgba(0,0,0,.66),#262626),url("/images/background.png");
-    background-size: 120% 2000px, 100% auto;
-    background-repeat: no-repeat;
-    --bg-blend-mode: multiply;
 }
 
 ::-webkit-scrollbar
@@ -36,24 +31,7 @@ body {
     color: $page !important;
 }
 
-.button {
-    background-color: $page;
-    border: 1px solid $text-color;
-    border-radius: 4px;
-    color: $text-color;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0.1rem 1rem;
-    margin: 0 0.15rem;
-    transition: all 0.2s ease-in-out;
-    user-select: none;
 
-    &:hover {
-        background-color: $active-color !important;
-        color: $page !important;
-    }
-}
 
 .socials {
 	display: flex;

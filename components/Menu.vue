@@ -15,55 +15,67 @@
 		class="menu"
 		:class="{ collapsed: collapsed, menuFullScreen: fullscreen }"
 	>
-		<div class="avatar-card">
-			<div class="avatar-image">
-				<NuxtLink href="/"
-					><img src="/images/avatar.jpg" alt="avatar"
-				/></NuxtLink>
-			</div>
-			<div class="avatar-title">
-				<span>Jacob Sijsma</span>
-			</div>
-
-			<div class="avatar-subtitle">{{ avatarSubtitle[language] }}</div>
-
-			<div class="socials">
-				<a :href="social.href" v-for="social in socials">
-					<img :src="`/images/${social.image}`" :alt="social.name" />
-					<span class="tooltip"> {{ social.tooltip }}</span>
-				</a>
-			</div>
-
-			<div class="language">
-				<div
-					class="button"
-					:class="{ languageSelected: language == 'nl' }"
-					@click="setLanguage('nl')"
-				>
-					NL
+		<div class="top-part" :class="{ 'top-part-fullscreen': fullscreen }">
+			<div class="avatar-card">
+				<div class="avatar-image">
+					<NuxtLink href="/"
+						><img src="/images/avatar.jpg" alt="avatar"
+					/></NuxtLink>
 				</div>
-				<div
-					class="button"
-					:class="{ languageSelected: language == 'en' }"
-					@click="setLanguage('en')"
-				>
-					EN
+				<div class="avatar-title">
+					<span>Jacob Sijsma</span>
 				</div>
-			</div>
-		</div>
 
-		<nav>
-			<ul>
-				<li v-for="link in menu">
-					<NuxtLink
-						:to="link.path"
-						@click="this.menuVisible = false"
-						>{{ link.name[language] }}</NuxtLink
+				<div class="avatar-subtitle">
+					{{ avatarSubtitle[language] }}
+				</div>
+
+				<div class="socials">
+					<a :href="social.href" v-for="social in socials">
+						<img
+							:src="`/images/${social.image}`"
+							:alt="social.name"
+						/>
+						<span class="tooltip"> {{ social.tooltip }}</span>
+					</a>
+				</div>
+
+				<div class="language">
+					<div
+						class="button"
+						:class="{
+							languageSelected: language == 'nl',
+							'button-dark': fullscreen,
+						}"
+						@click="setLanguage('nl')"
 					>
-				</li>
-			</ul>
-		</nav>
+						NL
+					</div>
+					<div
+						class="button"
+						:class="{
+							languageSelected: language == 'en',
+							'button-dark': fullscreen,
+						}"
+						@click="setLanguage('en')"
+					>
+						EN
+					</div>
+				</div>
+			</div>
 
+			<nav>
+				<ul>
+					<li v-for="link in menu" :class="{'active-link' : this.route == link.path }">
+						<NuxtLink
+							:to="`/${link.path}`"
+							@click="this.menuVisible = false"
+							>{{ link.name[language] }}</NuxtLink
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<div class="menu-footer">
 			<div class="menu-footer-text">
 				<span class="design-by"> {{ designBy[language] }}</span>
@@ -94,6 +106,7 @@ import { useLanguageStore } from "~/store/language.js";
 export default {
 	setup() {
 		return {
+            route: useRoute(),
 			store: useLanguageStore(),
 		};
 	},
@@ -122,7 +135,7 @@ export default {
 					name: "LinkedIn",
 					image: "linkedin.svg",
 					tooltip: "Visit",
-					href: "https://www.linkedin.com/in/jacob-sijsma-1b1b3b1b2/",
+					href: "https://www.linkedin.com/in/jacob-sijsma-877765183/",
 				},
 				{
 					name: "Github",
@@ -146,33 +159,33 @@ export default {
 
 			menu: [
 				{
+
 					name: {
 						nl: "Over mij",
 						en: "About me",
 					},
-					path: "/",
-				},
-				{
-					name: {
-						nl: "Projecten",
-						en: "Projects",
-					},
-					path: "/projects",
+					path: "",
 				},
 				{
 					name: {
 						nl: "Vaardigheden",
 						en: "Skills",
 					},
-					path: "/skills",
+					path: "skills",
 				},
-
+				{
+					name: {
+						nl: "Projecten",
+						en: "Projects",
+					},
+					path: "projects",
+				},
 				{
 					name: {
 						nl: "Demonstraties",
 						en: "Demonstrations",
 					},
-					path: "/demos",
+					path: "demos",
 				},
 			],
 		};
@@ -192,6 +205,7 @@ export default {
 		collapsed() {
 			return this.menuBreakpoint && !this.menuVisible;
 		},
+
 	},
 
 	methods: {
@@ -233,6 +247,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.router-link-active {
+    color: $link-color !important;
+}
 .menu {
 	background-color: #eee;
 
@@ -242,9 +260,18 @@ export default {
 
 	display: flex;
 	flex-direction: column;
+    justify-content: space-between;
+    
+	nav ul li {
 
-	nav ul li a {
-		font-family: "Kalam", cursive;
+        .active-link {
+            color: $active-color !important;
+        }
+
+        a {
+            font-family: "Kalam", cursive;
+        }
+		
 	}
 
 	.menu-button {
@@ -390,7 +417,7 @@ nav {
 	}
 
 	a:hover {
-		color: $active-color;
+		color: $active-color !important;
 		margin-left: 5px;
 	}
 }
@@ -417,8 +444,32 @@ nav {
 	justify-content: center;
 }
 
+.button {
+	border: 1px solid $text-color;
+	color: $text-color;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.2rem 1.2rem;
+	margin: 0 0.2rem;
+
+	transition: all 0.2s ease-in-out;
+	user-select: none;
+
+	&:hover {
+		background-color: $active-color !important;
+		color: $page !important;
+	}
+}
+
+.button-dark {
+	color: $page;
+	border: 1px solid $page;
+}
+
 .languageSelected {
-	background-color: $text-color !important;
+	border: 1px solid $active-color;
+	background-color: $active-color !important;
 	color: $page !important;
 }
 
@@ -483,6 +534,14 @@ nav {
 			}
 		}
 	}
+}
+
+.top-part {
+}
+
+.top-part-fullscreen {
+	top: 0;
+	position: sticky;
 }
 
 @media screen and (max-width: 1200px) {

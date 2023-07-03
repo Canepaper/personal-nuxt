@@ -22,7 +22,7 @@ p {
 
 a {
     font-size: 1.2rem;
-    
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     text-decoration: none;

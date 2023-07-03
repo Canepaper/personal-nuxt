@@ -27,8 +27,13 @@
 	@include card;
 }
 
+.title {
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+}
+
 .page-content {
-    padding: 0px 20px;
+    padding: 50px 50px;
 	animation: 0.5s ease-out 0s 1 appear;
     flex: 1 1 auto;
     max-width: 2000px;

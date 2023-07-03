@@ -1,21 +1,21 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useLanguageStore = defineStore('language',{
-    id: 'language',
+export const useLanguageStore = defineStore("language", {
+	id: "language",
 
-    state: () => ({
-        language: 'nl'
-    }),
+	state: () => ({
+		language: "nl",
+	}),
 
-    getters: {
-        getLanguage() {
-            return this.language
-        }
-    },
+	getters: {
+		getLanguage() {
+			return this.language;
+		},
+	},
 
-    actions: {
-        setLanguage(language) {
-            this.language = language
-        }
-    },
-})
+	actions: {
+		setLanguage(language) {
+			this.language = language;
+		},
+	},
+});
