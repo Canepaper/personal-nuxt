@@ -59,7 +59,22 @@ export default {
                     link: 'https://coinsymbol.com/',
 
                     image: 'coinsymbol.jpg',
-                }
+                },
+                {
+                    title: {
+                        en: "Stripe Donation Interface",
+                        nl: "Stripe Donatie Interface"
+                    },
+
+                    description: {
+                        en: "This was a task for a client twitch streamer to integrate Credit Card donations and have them shown live on stream, it uses webhooks for the backend and Vue.js for the frontend.",
+                        nl: "Dit was een taak voor een twitch-streamer om creditcarddonaties te integreren en deze live op stream te laten zien. Het gebruikt webhooks voor de backend en Vue.js voor de frontend."
+                    },
+
+                    link: "",
+
+                    image: "stripe.jpg"
+                },
             ]
         }
     }

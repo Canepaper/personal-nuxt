@@ -1,20 +1,19 @@
 <template>
 	<h1 class="title">{{ title[language] }}</h1>
 
-    <h2>Demos</h2>
+	<h2>Demos</h2>
 
-    <p v-if="language == 'en'">
-        A collection of demos I made to showcase my skills.
-    </p>
+	<p v-if="language == 'en'">
+		A collection of demos I made to showcase my skills.
+	</p>
 
-    <p v-if="language == 'nl'">
-        Een verzameling demonstraties die ik heb gemaakt om mijn vaardigheden te laten zien.
-    </p>
+	<p v-if="language == 'nl'">
+		Een verzameling demonstraties die ik heb gemaakt om mijn vaardigheden te laten zien.
+	</p>
 
-    <div class="demos" v-for="demo in demos">
-        <Demo :data="demo"></Demo>
-    </div>
-
+	<div class="demos" v-for="demo in demos">
+		<Demo :data="demo"></Demo>
+	</div>
 
 	<h2>Codepen</h2>
 	<p>{{ description[language] }}</p>
@@ -22,11 +21,7 @@
 
 	<div class="categories">
 		<template v-for="category in categories" :key="category">
-			<div
-				class="pen-button"
-				:class="{ 'pen-button-selected': category.selected }"
-				@click="selectCategory(category)"
-			>
+			<div class="pen-button" :class="{ 'pen-button-selected': category.selected }" @click="selectCategory(category)">
 				{{ category.name }}
 			</div>
 		</template>
@@ -41,12 +36,7 @@
 
 	<div class="pens">
 		<template v-for="pen in pens" :key="pen">
-			<Pen
-				:slug="pen.slug"
-				:tags="pen.tags"
-				:title="pen.title"
-				v-show="categoryIsSelected(pen.tags)"
-			></Pen>
+			<Pen :slug="pen.slug" :tags="pen.tags" :title="pen.title" v-show="categoryIsSelected(pen.tags)"></Pen>
 		</template>
 	</div>
 </template>
@@ -132,23 +122,40 @@ export default {
 				nl: "Een verzameling pennen die ik heb gemaakt voor Codepen.io.",
 			},
 
-            demos: [
-                {
-                    title: {
-                        en: "Image gallery",
-                        nl: "Afbeeldingen galerij",
-                    },
+			demos: [
+				{
+					title: {
+						en: "Image gallery",
+						nl: "Afbeeldingen galerij",
+					},
 
-                    description: {
-                        en: "Image gallery that lazy loads images in a unique grid pattern",
-                        nl: "Afbeeldingen galerij die afbeeldingen in een uniek grid patroon lazy load",
-                    },
+					description: {
+						en: "Image gallery that lazy loads images in a unique grid pattern",
+						nl: "Afbeeldingen galerij die afbeeldingen in een uniek grid patroon lazy load",
+					},
 
-                    link: "examples/gallery",
+					link: "examples/gallery",
 
-                    image: "gallery.png",
-                }
-            ],
+					image: "gallery.png",
+				},
+				{
+					title: {
+						en: "Task Manager",
+						nl: "Taakbeheer"
+					},
+
+					description: {
+						en: "This was an exercise to write an app without a framework in plain javascript",
+						nl: "Dit was een oefening om een app te schrijven zonder framework"
+					},
+
+					link: "https://taskmanager.j-web.dev",
+
+					image: "task-manager.jpg",
+
+					href: true
+				}
+			],
 
 			pens: [
 				{
@@ -266,6 +273,7 @@ export default {
 	font-size: 3rem;
 	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
+
 .pens {
 	display: flex;
 	flex-wrap: wrap;

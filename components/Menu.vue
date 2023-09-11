@@ -2,25 +2,16 @@
 	<div class="topbar">
 		<div class="topnav" :class="{ 'topbar-invisible': menuVisible }">
 			<div class="topnav-button">
-				<span
-					class="material-symbols-outlined"
-					@click="menuVisible = true"
-					>menu</span
-				>
+				<span class="material-symbols-outlined" @click="menuVisible = true">menu</span>
 			</div>
 		</div>
 	</div>
 
-	<div
-		class="menu"
-		:class="{ collapsed: collapsed, menuFullScreen: fullscreen }"
-	>
+	<div class="menu" :class="{ collapsed: collapsed, menuFullScreen: fullscreen }">
 		<div class="top-part" :class="{ 'top-part-fullscreen': fullscreen }">
 			<div class="avatar-card">
 				<div class="avatar-image">
-					<NuxtLink href="/"
-						><img src="/images/avatar.jpg" alt="avatar"
-					/></NuxtLink>
+					<NuxtLink href="/"><img src="/images/avatar.jpg" alt="avatar" /></NuxtLink>
 				</div>
 				<div class="avatar-title">
 					<span>Jacob Sijsma</span>
@@ -32,33 +23,22 @@
 
 				<div class="socials">
 					<a :href="social.href" v-for="social in socials">
-						<img
-							:src="`/images/${social.image}`"
-							:alt="social.name"
-						/>
+						<img :src="`/images/${social.image}`" :alt="social.name" class="social" />
 						<span class="tooltip"> {{ social.tooltip }}</span>
 					</a>
 				</div>
 
 				<div class="language">
-					<div
-						class="button"
-						:class="{
-							languageSelected: language == 'nl',
-							'button-dark': fullscreen,
-						}"
-						@click="setLanguage('nl')"
-					>
+					<div class="button" :class="{
+						languageSelected: language == 'nl',
+						'button-dark': fullscreen,
+					}" @click="setLanguage('nl')">
 						NL
 					</div>
-					<div
-						class="button"
-						:class="{
-							languageSelected: language == 'en',
-							'button-dark': fullscreen,
-						}"
-						@click="setLanguage('en')"
-					>
+					<div class="button" :class="{
+						languageSelected: language == 'en',
+						'button-dark': fullscreen,
+					}" @click="setLanguage('en')">
 						EN
 					</div>
 				</div>
@@ -66,12 +46,9 @@
 
 			<nav>
 				<ul>
-					<li v-for="link in menu" :class="{'active-link' : this.route == link.path }">
-						<NuxtLink
-							:to="`/${link.path}`"
-							@click="this.menuVisible = false"
-							>{{ link.name[language] }}</NuxtLink
-						>
+					<li v-for="link in menu" :class="{ 'active-link': this.route == link.path }">
+						<NuxtLink :to="`/${link.path}`" @click="this.menuVisible = false">{{ link.name[language] }}
+						</NuxtLink>
 					</li>
 				</ul>
 			</nav>
@@ -84,18 +61,8 @@
 		</div>
 
 		<div class="menu-button">
-			<span
-				v-if="!menuVisible"
-				class="material-symbols-outlined"
-				@click="menuVisible = true"
-				>chevron_right</span
-			>
-			<span
-				v-else
-				class="material-symbols-outlined"
-				@click="menuVisible = false"
-				>chevron_left</span
-			>
+			<span v-if="!menuVisible" class="material-symbols-outlined" @click="menuVisible = true">chevron_right</span>
+			<span v-else class="material-symbols-outlined" @click="menuVisible = false">chevron_left</span>
 		</div>
 	</div>
 </template>
@@ -106,7 +73,7 @@ import { useLanguageStore } from "~/store/language.js";
 export default {
 	setup() {
 		return {
-            route: useRoute(),
+			route: useRoute(),
 			store: useLanguageStore(),
 		};
 	},
@@ -247,10 +214,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .router-link-active {
-    color: $link-color !important;
+	color: $link-color !important;
 }
+
 .menu {
 	background-color: #eee;
 
@@ -260,18 +227,20 @@ export default {
 
 	display: flex;
 	flex-direction: column;
-    justify-content: space-between;
-    
+	justify-content: space-between;
+
+	transition: all 1s ease-out;
+
 	nav ul li {
 
-        .active-link {
-            color: $active-color !important;
-        }
+		.active-link {
+			color: $active-color !important;
+		}
 
-        a {
-            font-family: "Kalam", cursive;
-        }
-		
+		a {
+			font-family: "Kalam", cursive;
+		}
+
 	}
 
 	.menu-button {
@@ -319,11 +288,7 @@ export default {
 	align-items: center;
 	padding: 20px;
 
-	img {
-		width: 170px;
-		height: 170px;
-		border-radius: 50%;
-	}
+
 
 	.avatar-title {
 		font-size: 1.8rem;
@@ -340,12 +305,17 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		img {
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+		}
 	}
 
 	.avatar-subtitle {
 		font-size: 1.2rem;
 		font-weight: 400;
-		margin-top: -5px;
 	}
 }
 
@@ -357,8 +327,7 @@ export default {
 		width: 25px;
 		height: 25px;
 		margin: 0px 10px;
-		filter: invert(30%) sepia(5%) saturate(17%) hue-rotate(314deg)
-			brightness(101%) contrast(88%);
+		filter: invert(30%) sepia(5%) saturate(17%) hue-rotate(314deg) brightness(101%) contrast(88%);
 	}
 
 	a {
@@ -440,6 +409,7 @@ nav {
 }
 
 .language {
+	margin: 10px 0px;
 	display: flex;
 	justify-content: center;
 }
@@ -490,6 +460,7 @@ nav {
 			font-size: 2rem;
 		}
 	}
+
 	.topnav-title {
 		font-size: 1.2rem;
 		font-weight: 700;
@@ -501,8 +472,7 @@ nav {
 		filter: brightness(150) invert(1);
 
 		a img {
-			filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-				brightness(100%) contrast(100%);
+			filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 		}
 	}
 }
@@ -522,12 +492,13 @@ nav {
 	.avatar-card {
 		.socials {
 			img {
-				filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-					brightness(100%) contrast(100%);
+				filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 			}
 		}
+
 		.avatar-image {
 			width: 60%;
+
 			img {
 				width: 120px;
 				height: 120px;
@@ -536,8 +507,7 @@ nav {
 	}
 }
 
-.top-part {
-}
+.top-part {}
 
 .top-part-fullscreen {
 	top: 0;
@@ -548,6 +518,7 @@ nav {
 	.topbar {
 		display: flex;
 	}
+
 	.menu {
 		position: fixed;
 		top: 0;
@@ -564,12 +535,13 @@ nav {
 		.avatar-card {
 			.socials {
 				img {
-					filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
-						brightness(100%) contrast(100%);
+					filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 				}
 			}
+
 			.avatar-image {
 				width: 60%;
+
 				img {
 					width: 120px;
 					height: 120px;

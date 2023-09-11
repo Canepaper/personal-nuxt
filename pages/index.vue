@@ -30,7 +30,7 @@
 		<h3>WhatsApp</h3>
 		<a href="tel:+31-644147960">{{ phoneNumber[language] }}</a>
 		<h3>Email</h3>
-		<a href="mailto:JSijsma@protonmail.com">JSijsma@protonmail.com</a>
+		<a href="mailto:jacobsijsma@protonmail.com">jacobsijsma@protonmail.com</a>
 		<h3>LinkedIn</h3>
 		<a
 			href="https://www.linkedin.com/in/jacob-sijsma-877765183/"

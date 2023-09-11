@@ -1,31 +1,25 @@
 <template>
 	<div class="demo">
-		<div
-			class="demo-picture"
-			:style="{ background: 'url(images/' + data.image + ')'}"
-            style="background-size: cover;"
-			:class="pictureBackground"
-		>
+		<div class="demo-picture" :style="{ background: 'url(images/' + data.image + ')' }" style="background-size: cover;"
+			:class="pictureBackground">
 			<div class="demo-overlay">
 				<div class="demo-actions">
 					<div class="demo-title">
 						{{ data.title[language] }}
 					</div>
-					<nuxt-link
-						:to="data.link"
-						target="_blank"
-						class="demo-button"
-						v-if="language == 'en'"
-						>Visit</nuxt-link
-					>
-					<nuxt-link
-						:to="data.link"
-						target="_blank"
-						class="demo-button"
-						v-if="language == 'nl'"
-						>Bekijk</nuxt-link
-					>
+					<div v-if="data.href">
+						<a :href="data.link" target="_blank" class="demo-button"
+							v-if="language == 'en'">Visit</a>
+						<a :href="data.link" target="_blank" class="demo-button"
+							v-if="language == 'nl'">Bekijk</a>
+					</div>
 
+					<div v-else>
+						<nuxt-link :to="data.link" target="_blank" class="demo-button"
+							v-if="language == 'en'">Visit</nuxt-link>
+						<nuxt-link :to="data.link" target="_blank" class="demo-button"
+							v-if="language == 'nl'">Bekijk</nuxt-link>
+					</div>
 				</div>
 
 				<div class="demo-description">
@@ -34,10 +28,10 @@
 					<span class="material-symbols-outlined info"> info </span>
 
 					<p v-if="language == 'en'">
-                        {{ data.description[language] }}
+						{{ data.description[language] }}
 					</p>
 					<p v-if="language == 'nl'">
-                        {{ data.description[language] }}
+						{{ data.description[language] }}
 					</p>
 				</div>
 			</div>
@@ -80,16 +74,18 @@ export default {
 	.demo-picture {
 		// background: url("/images/gallery.png");
 		background-size: cover;
-        
+
 		transition: all 0.3s ease-in-out;
 		position: relative;
-        overflow: hidden;
+		overflow: hidden;
+
 		.demo-actions {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 		}
+
 		.demo-overlay {
 			aspect-ratio: 16/9;
 			z-index: 9;
@@ -105,10 +101,10 @@ export default {
 				background: rgba(0, 0, 0, 0.4);
 			}
 
-            .demo-description {
-                right: 0;
-                opacity: 1;
-            }
+			.demo-description {
+				right: 0;
+				opacity: 1;
+			}
 		}
 
 		.demo-title {
@@ -118,7 +114,7 @@ export default {
 		}
 
 		.demo-description {
-            opacity: 0;
+			opacity: 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -131,12 +127,12 @@ export default {
 			text-align: center;
 			position: absolute;
 			right: -25%;
-            transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
 
-            span {
-                font-size: 2.2rem;
-                
-            }
+			span {
+				font-size: 2.2rem;
+
+			}
 		}
 
 		.demo-button {
