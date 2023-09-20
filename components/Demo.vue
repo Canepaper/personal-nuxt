@@ -8,10 +8,8 @@
 						{{ data.title[language] }}
 					</div>
 					<div v-if="data.href">
-						<a :href="data.link" target="_blank" class="demo-button"
-							v-if="language == 'en'">Visit</a>
-						<a :href="data.link" target="_blank" class="demo-button"
-							v-if="language == 'nl'">Bekijk</a>
+						<a :href="data.link" target="_blank" class="demo-button" v-if="language == 'en'">Visit</a>
+						<a :href="data.link" target="_blank" class="demo-button" v-if="language == 'nl'">Bekijk</a>
 					</div>
 
 					<div v-else>
@@ -67,7 +65,6 @@ export default {
 <style lang="scss" scoped>
 .demo {
 	padding: 20px;
-	width: 100%;
 	background: $dark;
 	@include card;
 
@@ -108,7 +105,7 @@ export default {
 		}
 
 		.demo-title {
-			font-size: 3rem;
+			font-size: 2.5rem;
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 			margin-bottom: 1.2rem;
 		}
@@ -120,6 +117,7 @@ export default {
 			justify-content: center;
 			background: rgba(0, 0, 0, 0.6);
 			width: 25%;
+			// min-width: 300px;
 			height: 100%;
 			font-size: 1.2rem;
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
@@ -136,22 +134,46 @@ export default {
 		}
 
 		.demo-button {
+			display: block;
+			box-sizing: border-box;
 			background: rgba(0, 0, 0, 0.2);
 			border: 2px solid rgba(255, 255, 255, 1);
-			display: block;
 			color: $page;
 			font-weight: bold;
 			cursor: pointer;
 			font-size: 1.2rem;
 			padding: 15px 40px;
-			margin-bottom: 1rem;
-			transition: all 0.2s ease-in-out;
+			// transition: all 0.2s ease-in-out;
 			user-select: none;
 
 			&:hover {
-				background: rgba(0, 0, 0, 0.5);
-				border: 2px solid rgba(255, 255, 255, 0.8);
+				background: $active-color;
+				border: none;
+				border: 2px solid $active-color;
+				// border: 2px solid rgba(255, 255, 255, 0.8);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.demo {
+		padding: 10px;
+
+		.demo-picture {
+
+			&:hover {
+				.demo-description {
+					right: -25%;
+					opacity: 0;
+				}
+			}
+
+			.demo-title {
+				font-size: 1.5rem;
+			}
+
+
 		}
 	}
 }

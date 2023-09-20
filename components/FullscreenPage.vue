@@ -61,4 +61,10 @@
         padding: 0px 20px;
     }
 }
+
+@media (max-width: 768px) {
+	.page-content {
+		padding: 0px 5px;
+	}
+}
 </style>

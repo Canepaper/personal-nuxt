@@ -215,7 +215,7 @@ export default {
 
 <style lang="scss" scoped>
 .router-link-active {
-	color: $link-color !important;
+	color: $active-color !important;
 }
 
 .menu {
@@ -387,7 +387,7 @@ nav {
 
 	a:hover {
 		color: $active-color !important;
-		margin-left: 5px;
+		// margin-left: 5px;
 	}
 }
 

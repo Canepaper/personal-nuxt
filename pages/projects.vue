@@ -3,9 +3,8 @@
     <p v-if="language == 'en'">Personal projects I've worked on and work I've done for clients.</p>
     <p v-if="language == 'nl'">Persoonlijke projecten waar ik aan heb gewerkt en werk dat ik heb gedaan voor klanten.</p>
 
-
-    <div class="demos" v-for="project in projects">
-        <Demo :data="project"></Demo>
+    <div class="demos">
+        <Demo :data="project" v-for="project in projects"></Demo>
     </div>
 
 </template>
@@ -75,6 +74,36 @@ export default {
 
                     image: "stripe.jpg"
                 },
+                {
+                    title: {
+                        en: "Gubba Homestead",
+                        nl: "Gubba Homestead"
+                    },
+
+                    description: {
+                        en: "Job for a client that integrates wordpress and shopify seamlessly",
+                        nl: "Een taak voor een client die wordpress en shopify naadloos integreerd"
+                    },
+
+                    link: "https://gubbahomestead.com/",
+
+                    image: "gubbahomestead.jpg"
+                },
+                {
+                    title: {
+                        en: "Provenreach",
+                        nl: "Provenreach"
+                    },
+                    
+                    description: {
+                        en: "This was a website I made for an online marketing consulting agency, it's made in basic wordpress by request",
+                        nl: "Dit was een website die ik heb gemaakt voor een online marketingadviesbureau, op verzoek gemaakt in standaard WordPress"
+                    },
+
+                    link: "https://provenreach.com/",
+
+                    image: "provenreach.jpg"
+                }
             ]
         }
     }
