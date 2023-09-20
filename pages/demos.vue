@@ -11,8 +11,8 @@
 		Een verzameling demonstraties die ik heb gemaakt om mijn vaardigheden te laten zien.
 	</p>
 
-	<div class="demos" v-for="demo in demos">
-		<Demo :data="demo"></Demo>
+	<div class="demos">
+		<Demo :data="demo" v-for="demo in demos"></Demo>
 	</div>
 
 	<h2>Codepen</h2>

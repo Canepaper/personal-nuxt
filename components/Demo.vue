@@ -116,7 +116,7 @@ export default {
 			flex-direction: column;
 			justify-content: center;
 			background: rgba(0, 0, 0, 0.6);
-			width: 25%;
+			width: 30%;
 			// min-width: 300px;
 			height: 100%;
 			font-size: 1.2rem;
@@ -164,7 +164,7 @@ export default {
 
 			&:hover {
 				.demo-description {
-					right: -25%;
+					right: -30%;
 					opacity: 0;
 				}
 			}
