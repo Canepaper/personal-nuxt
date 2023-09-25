@@ -167,6 +167,14 @@ export default {
 					tags: ["Vue", "JavaScript"],
 				},
 				{
+					slug: "abPpqwo",
+					title: {
+						en: "Vue Alerts",
+						nl: "Vue Alerts"
+					},
+					tags: ["Vue"]
+				},
+				{
 					slug: "MWPZQwy",
 					title: {
 						en: "Vue Comment Form with Warning Field",
@@ -253,15 +261,7 @@ export default {
 						nl: "Vue Voortgangsbalk",
 					},
 					tags: ["Vue", "JavaScript", "CSS"],
-				},
-				{
-					slug: "BaLQvGO",
-					title: {
-						en: "Vuetify Timer - Circular Progress",
-						nl: "Vuetify Timer - Cirkel Voortgang",
-					},
-					tags: ["Vue", "JavaScript", "Vuetify"],
-				},
+				}
 			],
 		};
 	},
