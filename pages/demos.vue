@@ -140,6 +140,21 @@ export default {
 				},
 				{
 					title: {
+						en: "Loan Interest Calculator",
+						nl: "Rente Berekening"
+					},
+
+					description: {
+						en: "A loan calculator written in Vue.",
+						nl: "Leningen berekenen in Vue"
+					},
+
+					link: "examples/loan",
+
+					image: "loan.png"
+				},
+				{
+					title: {
 						en: "Task Manager",
 						nl: "Taakbeheer"
 					},
