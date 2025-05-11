@@ -160,8 +160,8 @@ export default {
 					},
 
 					description: {
-						en: "This was an exercise to write an app without a framework in plain javascript",
-						nl: "Dit was een oefening om een app te schrijven zonder framework"
+						en: "This was an exercise to write an app without a framework in plain JavaScript",
+						nl: "Dit was een oefening om een app te schrijven zonder framework in vanilla JavaScript"
 					},
 
 					link: "https://taskmanager.j-web.dev",

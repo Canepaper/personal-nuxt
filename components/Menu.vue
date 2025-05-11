@@ -11,7 +11,7 @@
 		<div class="top-part" :class="{ 'top-part-fullscreen': fullscreen }">
 			<div class="avatar-card">
 				<div class="avatar-image">
-					<NuxtLink href="/"><img src="/images/avatar.jpg" alt="avatar" /></NuxtLink>
+					<NuxtLink href="/"><img src="/images/avatar.png" alt="avatar" /></NuxtLink>
 				</div>
 				<div class="avatar-title">
 					<span>Jacob Sijsma</span>
@@ -56,7 +56,7 @@
 		<div class="menu-footer">
 			<div class="menu-footer-text">
 				<span class="design-by"> {{ designBy[language] }}</span>
-				<span class="footer-text-name">Jacob Sijsma ©2023</span>
+				<span class="footer-text-name">Jacob Sijsma ©{{ new Date().getFullYear() }}</span>
 			</div>
 		</div>
 
@@ -229,7 +229,6 @@ export default {
 	flex-direction: column;
 	justify-content: space-between;
 
-	transition: all 1s ease-out;
 
 	nav ul li {
 
@@ -526,6 +525,10 @@ nav {
 		z-index: 999;
 		height: 100vh;
 		min-height: 0;
+
+		transition: all 0.5s ease-in-out;
+
+
 		@include darkMode;
 
 		nav ul li a {

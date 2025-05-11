@@ -9,7 +9,7 @@
 			the past. Hop over to my <NuxtLink to="demos">Demonstrations</NuxtLink> page to see some of my recent code snippets.
 		</p>
 		<p v-else>
-			Mijn naam is Jacob, ik ben een web developer met 3 jaar ervaring.
+			Mijn naam is Jacob, ik ben een web developer met 5 jaar ervaring.
 			Bekijk mijn <NuxtLink to="skills">vaardigheden</NuxtLink> om te zien
 			wat ik kan. Bekijk mijn
 			<NuxtLink to="projects">projecten</NuxtLink> om te zien wat ik in
@@ -30,7 +30,7 @@
 		<h3>WhatsApp</h3>
 		<a href="tel:+31-644147960">{{ phoneNumber[language] }}</a>
 		<h3>Email</h3>
-		<a href="mailto:jacobsijsma@protonmail.com">jacobsijsma@protonmail.com</a>
+		<a href="mailto:jacobsijsma@gmail.com">jacobsijsma@gmail.com</a>
 		<h3>LinkedIn</h3>
 		<a
 			href="https://www.linkedin.com/in/jacob-sijsma-877765183/"

@@ -46,6 +46,21 @@ export default {
             projects: [
                 {
                     title: {
+                        en: "Hutjens Goldsmith Shop",
+                        nl: "Hutjens Edelsmederij"
+                    },
+
+                    description: {
+                        en: "I made this webshop in lightspeed when I worked briefly for Emarkable",
+                        nl: "Ik heb deze webshop in lightspeed gemaakt toen ik kort voor Emarkable heb gewerkt"
+                    },
+
+                    link: "https://www.hutjensedelsmederij.com/",
+
+                    image: "hutjens.png"
+                },
+                {
+                    title: {
                         en: "Coinsymbol",
                         nl: "Coinsymbol",
                     },

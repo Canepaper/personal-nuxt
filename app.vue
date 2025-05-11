@@ -4,15 +4,17 @@
     </NuxtLayout>
 </template>
 
-<script>
-export default {
-    setup () {
-        
-
-        return {}
+<script setup>
+useHead({
+  script: [
+    {
+      src: 'https://unpkg.com/thpace',
+      defer: true
     }
-}
+  ]
+})
 </script>
+
 
 <style lang="scss">
 p {

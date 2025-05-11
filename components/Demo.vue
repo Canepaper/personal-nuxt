@@ -129,7 +129,10 @@ export default {
 
 			span {
 				font-size: 2.2rem;
+			}
 
+			p {
+				font-size: 1.4rem;
 			}
 		}
 

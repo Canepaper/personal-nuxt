@@ -1,5 +1,6 @@
 <template>
 	<div class="fullscreen-page">
+		<ThPaceBG />
 		<div class="page-content">
 			<NuxtPage />
 		</div>
@@ -9,14 +10,13 @@
 
 </template>
 
-<script setup></script>
+<script setup>
+import ThPaceBG from '~/components/ThPaceBG.vue'
+</script>
 
 <style lang="scss" scoped>
 .fullscreen-page {
 	min-height: 100vh;
-	
-	// background: $page;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;

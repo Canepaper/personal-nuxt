@@ -5,7 +5,7 @@
 
 		<p> {{ description[language] }}</p>
 		<div class="skills">
-			<Skill v-for="skill in skills" :data="skill"></Skill>
+			<Skill v-for="skill in skillsSorted" :data="skill"></Skill>
 		</div>
 
 
@@ -33,6 +33,10 @@ export default {
 	computed: {
 		language() {
 			return this.languageStore.language
+		},
+
+		skillsSorted() {
+			return this.skills.sort((a, b) => b.stars - a.stars)
 		}
 	},
 	
@@ -116,7 +120,7 @@ export default {
                 {
 					name: 'Node.JS',
                     svg: 'nodejs',
-					stars: 3
+					stars: 4
 				},
 				{
 					name: 'Vue',
@@ -132,6 +136,16 @@ export default {
 					name: 'Vuetify',
                     svg: 'vuetify',
 					stars: 3
+				},
+				{
+					name: 'Shopify',
+					svg: 'shopify',
+					stars: 2
+				},
+				{
+					name: "Lightspeed",
+					svg: "lightspeed",
+					stars: 2
 				},
 				{
 					name: 'Vuex/Pinia',
@@ -161,10 +175,8 @@ export default {
 				{
 					name: 'TypeScript',
                     svg: 'typescript',
-					stars: 1
+					stars: 3
 				},
-
-
 			]
 		}
 	}

@@ -1,16 +1,16 @@
 <template>
 	<ClientOnly>
-		<div class="main-wrapper">
-			<Menu />
-			<Page />
-		</div>
+		<ThPaceBG />
+	  <div class="main-wrapper">
+		<Menu />
+		<Page />
+	  </div>
 	</ClientOnly>
-</template>
+  </template>
+  
 
-<script>
-export default {
-	layout: "default",
-};
+<script setup>
+import ThPaceBG from '~/components/ThPaceBG.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -22,17 +22,18 @@ export default {
 	box-sizing: border-box;
 }
 
-.background {
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 100vw;
-	position: fixed;
-	// background-image: $background;
-	background: $background-color;
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px; /* Adjust as needed */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  z-index: 0;
 }
 
 .main-wrapper {
+	z-index: 10;
 	margin: 0 auto;
 	padding: 40px;
 	max-width: 1500px;
