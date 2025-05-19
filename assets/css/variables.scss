@@ -1,10 +1,16 @@
 $background-image: url('/images/whitepaper.png');
 
 $background-color:#d5d5d5;
-// $page: #f8f8f8;
-$page: #f3f3f3;
-$text-color: #424242;
+// $bg-light: #f8f8f8;
+
+$inactive-color: rgba(211, 211, 211, 0.8);
+
 $link-color: #11ad11;
-$text-highlight: #aaffbd;
-$active-color: green;
-$dark: #1a1a1a;
+$highlight: #64a3be;
+$primary-color: #3181a3;
+
+$bg-dark: #1a1a1a;
+$text-dark: #f3f3f3;
+
+$bg-light: #f3f3f3;
+$text-light: #424242;

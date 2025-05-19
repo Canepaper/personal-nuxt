@@ -29,17 +29,15 @@
 				</div>
 
 				<div class="language">
-					<div class="button" :class="{
+					<div class="button left" :class="{
 						languageSelected: language == 'nl',
-						'button-dark': fullscreen,
 					}" @click="setLanguage('nl')">
-						NL
+						🇳🇱 NL
 					</div>
-					<div class="button" :class="{
+					<div class="button right" :class="{
 						languageSelected: language == 'en',
-						'button-dark': fullscreen,
 					}" @click="setLanguage('en')">
-						EN
+						🇬🇧 EN
 					</div>
 				</div>
 			</div>
@@ -214,8 +212,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.router-link-active {
-	color: $active-color !important;
+nav .router-link-active {
+	color: $primary-color !important;
 }
 
 .menu {
@@ -228,19 +226,6 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
-
-	nav ul li {
-
-		.active-link {
-			color: $active-color !important;
-		}
-
-		a {
-			font-family: "Kalam", cursive;
-		}
-
-	}
 
 	.menu-button {
 		position: absolute;
@@ -286,8 +271,6 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
-
-
 
 	.avatar-title {
 		font-size: 1.8rem;
@@ -336,7 +319,7 @@ export default {
 	.tooltip {
 		visibility: hidden;
 		width: 80px;
-		background-color: $text-color;
+		background-color: $text-light;
 		color: #fff;
 		text-align: center;
 		padding: 5px 0;
@@ -358,7 +341,7 @@ export default {
 		margin-left: -5px;
 		border-width: 5px;
 		border-style: solid;
-		border-color: transparent transparent $text-color transparent;
+		border-color: transparent transparent $text-light transparent;
 	}
 }
 
@@ -367,6 +350,7 @@ export default {
 // }
 
 nav {
+
 	flex: 1 1 auto;
 
 	ul {
@@ -374,19 +358,19 @@ nav {
 	}
 
 	a {
-		transition: all 0.2s ease-in-out;
 		padding: 15px;
 		text-decoration: none;
-		color: $text-color;
+		color: $text-light;
 		height: 100%;
 		display: block;
 		font-weight: 400;
 		font-size: 1.5rem;
+		font-family: "Kalam", cursive;
+		transition: all 0.3s ease-in-out;
 	}
 
 	a:hover {
-		color: $active-color !important;
-		// margin-left: 5px;
+		color: $highlight;
 	}
 }
 
@@ -403,7 +387,7 @@ nav {
 	top: 0;
 	left: 0;
 	padding: 0px 20px;
-	background-color: $page;
+	background-color: $bg-light;
 	@include darkMode;
 }
 
@@ -414,40 +398,48 @@ nav {
 }
 
 .button {
-	border: 1px solid $text-color;
-	color: $text-color;
+	color: $text-light;
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 1rem;
-	padding: 0.2rem 1.2rem;
-	margin: 0 0.2rem;
-
+	padding: 0.3rem 1.2rem;
+	background-color: $inactive-color;
 	transition: all 0.2s ease-in-out;
 	user-select: none;
 
 	&:hover {
-		background-color: $active-color !important;
-		color: $page !important;
+		background-color: $highlight !important;
+		// color: $bg-light !important;
+		// color: $text-light !important;
+	}
+
+	&.right {
+
+		border-radius: 0px 5px 5px 0px;
+	}
+
+	&.left {
+
+		border-radius: 5px 0px 0px 5px;
+	}
+
+	&.languageSelected {
+		background-color: $primary-color !important;
+		color: $bg-light !important;
 	}
 }
 
 .button-dark {
-	color: $page;
-	border: 1px solid $page;
+	color: $bg-light;
 }
 
-.languageSelected {
-	border: 1px solid $active-color;
-	background-color: $active-color !important;
-	color: $page !important;
-}
 
 .topnav {
 	width: calc(100% - 40px);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: $page;
+	background-color: $bg-light;
 	@include darkMode;
 	// display: none;
 
@@ -488,6 +480,8 @@ nav {
 		color: #fff;
 	}
 
+	.language {}
+
 	.avatar-card {
 		.socials {
 			img {
@@ -505,8 +499,6 @@ nav {
 		}
 	}
 }
-
-.top-part {}
 
 .top-part-fullscreen {
 	top: 0;

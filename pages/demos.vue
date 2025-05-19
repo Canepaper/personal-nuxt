@@ -1,5 +1,5 @@
 <template>
-	<h1 class="title">{{ title[language] }}</h1>
+	<h1 class="fullscreen-title">{{ title[language] }}</h1>
 
 	<h2>Demos</h2>
 
@@ -21,7 +21,8 @@
 
 	<div class="categories">
 		<template v-for="category in categories" :key="category">
-			<div class="pen-button" :class="{ 'pen-button-selected': category.selected }" @click="selectCategory(category)">
+			<div class="pen-button" :class="{ 'pen-button-selected': category.selected }"
+				@click="selectCategory(category)">
 				{{ category.name }}
 			</div>
 		</template>
@@ -284,17 +285,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title {
-	font-size: 3rem;
-	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-}
-
 .pens {
 	display: flex;
 	flex-wrap: wrap;
 }
-
-
 
 .selected {
 	background-color: #5e52ff !important;
@@ -311,7 +305,7 @@ export default {
 	background: rgba(0, 0, 0, 0.2);
 	border: 2px solid rgba(255, 255, 255, 0.5);
 
-	color: $page;
+	color: $bg-light;
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 1rem;
@@ -321,14 +315,14 @@ export default {
 	user-select: none;
 
 	&:hover {
-		background-color: $active-color !important;
-		color: $page !important;
+		background-color: $primary-color !important;
+		color: $bg-light !important;
 	}
 }
 
 .pen-button-selected {
-	border: 2px solid $active-color;
+	border: 2px solid $primary-color;
 	background-color: green;
-	color: $page !important;
+	color: $bg-light !important;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<div class="demo">
-		<div class="demo-picture" :style="{ background: 'url(images/' + data.image + ')' }" style="background-size: cover;"
-			:class="pictureBackground">
+		<div class="demo-picture" :style="{ background: 'url(images/' + data.image + ')' }"
+			style="background-size: cover;" :class="pictureBackground">
 			<div class="demo-overlay">
 				<div class="demo-actions">
 					<div class="demo-title">
@@ -65,7 +65,7 @@ export default {
 <style lang="scss" scoped>
 .demo {
 	padding: 20px;
-	background: $dark;
+	background: $bg-dark;
 	@include card;
 
 	.demo-picture {
@@ -141,7 +141,7 @@ export default {
 			box-sizing: border-box;
 			background: rgba(0, 0, 0, 0.2);
 			border: 2px solid rgba(255, 255, 255, 1);
-			color: $page;
+			color: $bg-light;
 			font-weight: bold;
 			cursor: pointer;
 			font-size: 1.2rem;
@@ -150,9 +150,9 @@ export default {
 			user-select: none;
 
 			&:hover {
-				background: $active-color;
+				background: $primary-color;
 				border: none;
-				border: 2px solid $active-color;
+				border: 2px solid $primary-color;
 				// border: 2px solid rgba(255, 255, 255, 0.8);
 			}
 		}

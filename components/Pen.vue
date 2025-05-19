@@ -3,29 +3,18 @@
 		<div class="pen">
 			<h2 class="pen-title">{{ title[language] }}</h2>
 
-			<iframe
-				class="pen-iframe"
-				height="600"
-				style="width: 100%"
-				scrolling="no"
+			<iframe class="pen-iframe" height="600" style="width: 100%" scrolling="no"
 				title="Bouncy Input Range Sliders with Vue"
 				:src="`https://codepen.io/Canesugar/embed/${slug}?default-tab=result&theme-id=dark&editable=true`"
-				frameborder="no"
-				loading="lazy"
-				allowtransparency="true"
-				allowfullscreen="true"
-			>
+				frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
 				See the Pen
 				<a :href="`https://codepen.io/Canesugar/pen/${slug}`">
-					Bouncy Input Range Sliders with Vue</a
-				>
-				by Canesugar (<a href="https://codepen.io/Canesugar"
-					>@Canesugar</a
-				>) on <a href="https://codepen.io">CodePen</a>.
+					Bouncy Input Range Sliders with Vue</a>
+				by Canesugar (<a href="https://codepen.io/Canesugar">@Canesugar</a>) on <a
+					href="https://codepen.io">CodePen</a>.
 			</iframe>
 
-			<b>Tags: </b
-			><span class="tag box-shadow" v-for="tag in tags">{{ tag }}</span>
+			<b>Tags: </b><span class="tag box-shadow" v-for="tag in tags">{{ tag }}</span>
 		</div>
 	</div>
 </template>
@@ -72,16 +61,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .pen-wrapper {
-    padding: 5px;
-    width: 100%;
+	padding: 5px;
+	width: 100%;
 }
 
 .pen {
 	padding: 20px;
 	width: 100%;
-	background: $dark;
+	background: $bg-dark;
 	@include card;
 }
 

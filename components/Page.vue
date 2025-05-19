@@ -11,11 +11,11 @@
 
 <style lang="scss" scoped>
 .page {
-	background: $page;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: calc(100vh - 80px);
+	background: $bg-light;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: calc(100vh - 80px);
 	width: 100%;
 	@include card;
 }
@@ -29,6 +29,7 @@
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -36,7 +37,7 @@
 
 @media (max-width: 1200px) {
 	.page {
-        margin-top: 60px;
+		margin-top: 60px;
 	}
 
 	.page-content {

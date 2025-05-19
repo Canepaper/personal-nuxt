@@ -1,5 +1,5 @@
 <template>
-	<div class="footer" :class="{ 'footer-dark' : dark }">
+	<div class="footer" :class="{ 'footer-dark': dark }">
 		<div class="footer-text">
 			<span>Jacob Sijsma ©2023</span>
 		</div>
@@ -14,7 +14,7 @@
 <script>
 export default {
 
-    props: ["dark"],
+	props: ["dark"],
 
 	data() {
 		return {
@@ -62,23 +62,22 @@ export default {
 
 	@include card;
 
-    .footer-text {
-        visibility: hidden;
-        font-size: 1.2rem;
-    }
+	.footer-text {
+		visibility: hidden;
+		font-size: 1.2rem;
+	}
 }
 
 .footer-dark {
-    background-color: $dark;
-    color: #eee;
+	background-color: $bg-dark;
+	color: #eee;
 }
 
 @media screen and (max-width: 1200px) {
-    .footer {
-        .footer-text {
-            visibility: visible;
-        }
-    }
+	.footer {
+		.footer-text {
+			visibility: visible;
+		}
+	}
 }
-
 </style>

@@ -48,16 +48,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .pen-wrapper {
-    padding: 5px;
-    width: 100%;
+	padding: 5px;
+	width: 100%;
 }
 
 .pen {
 	padding: 20px;
 	width: 100%;
-	background: $dark;
+	background: $bg-dark;
 	@include card;
 }
 

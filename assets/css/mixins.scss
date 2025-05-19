@@ -3,7 +3,7 @@
 }
 
 @mixin darkMode {
-    background-color: #1a1a1a;
-    color: #fff !important;
+    background-color: $bg-dark;
+    color: $text-dark !important;
 }
 

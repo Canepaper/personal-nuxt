@@ -2,41 +2,41 @@
 	<div>
 		<h1>{{ title[language] }}</h1>
 		<p v-if="language == 'en'">
-			My name is Jacob, I'm a web developer with 3 years experience. Have
-			a look at my <NuxtLink to="skills">skills</NuxtLink> to find out
-			what I can do. Check out my
-			<NuxtLink to="projects">Projects</NuxtLink> to see what I made in
-			the past. Hop over to my <NuxtLink to="demos">Demonstrations</NuxtLink> page to see some of my recent code snippets.
+			Hi, I'm Jacob, a passionate web developer with 5 years of experience turning ideas into interactive web
+			experiences.
+			Take a look at my <NuxtLink to="skills">skills</NuxtLink> to see what I work with, explore my <NuxtLink
+				to="projects">projects</NuxtLink> to check out what I've built,
+			and browse my <NuxtLink to="demos">demonstrations</NuxtLink> for recent code snippets and experiments.
 		</p>
 		<p v-else>
-			Mijn naam is Jacob, ik ben een web developer met 5 jaar ervaring.
-			Bekijk mijn <NuxtLink to="skills">vaardigheden</NuxtLink> om te zien
-			wat ik kan. Bekijk mijn
-			<NuxtLink to="projects">projecten</NuxtLink> om te zien wat ik in
-			het verleden heb gemaakt. Ga naar mijn <NuxtLink to="demos">demonstraties</NuxtLink> pagina om enkele van mijn recente code snippets te zien.
+			Hallo, ik ben Jacob, een gepassioneerde web developer met 5 jaar ervaring in het bouwen van interactieve
+			webervaringen.
+			Bekijk mijn <NuxtLink to="skills">vaardigheden</NuxtLink> om te zien waar ik mee werk, neem een kijkje bij
+			mijn <NuxtLink to="projects">projecten</NuxtLink> om te zien wat ik heb gebouwd,
+			en blader door mijn <NuxtLink to="demos">demonstraties</NuxtLink> voor recente code snippets en
+			experimenten.
 		</p>
 		<p v-if="language == 'en'">
-			Contact me for a copy of my Resume.
+			Want to know more? <strong>Contact me</strong> for a copy of my resume.
 		</p>
 		<p v-else>
-			Neem contact voor een kopie van mijn CV.
+			Meer weten? <strong>Neem contact op</strong> voor een kopie van mijn CV.
 		</p>
+
 		<h2>Contact</h2>
 		<p>
 			{{ contactDescription[language] }}
 		</p>
 		<h3>{{ telephone[language] }}</h3>
-		<a href="tel:+31-644147960">{{ phoneNumber[language] }}</a>
+		<ContactItem :label="phoneNumber[language]" :link="phoneNumber[language]" />
 		<h3>WhatsApp</h3>
-		<a href="tel:+31-644147960">{{ phoneNumber[language] }}</a>
+		<ContactItem :label="phoneNumber[language]" :link="phoneNumber[language]" />
+
 		<h3>Email</h3>
-		<a href="mailto:jacobsijsma@gmail.com">jacobsijsma@gmail.com</a>
+		<ContactItem :label="email" :link="email" />
 		<h3>LinkedIn</h3>
-		<a
-			href="https://www.linkedin.com/in/jacob-sijsma-877765183/"
-			target="_blank"
-			>https://www.linkedin.com/in/jacob-sijsma-877765183/</a
-		>
+		<a href="https://www.linkedin.com/in/jacob-sijsma-877765183/"
+			target="_blank">https://www.linkedin.com/in/jacob-sijsma-877765183/</a>
 	</div>
 </template>
 
@@ -71,8 +71,10 @@ export default {
 
 			phoneNumber: {
 				nl: "0644147960",
-				en: "(+31)644147960",
+				en: "+31644147960",
 			},
+
+			email: "JacobSijsma@gmail.com",
 		};
 	},
 
@@ -81,7 +83,13 @@ export default {
 			return this.store.language;
 		},
 	},
+
+	methods: {
+		copyToClipboard(text) {
+			navigator.clipboard.writeText(text);
+		},
+	},
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

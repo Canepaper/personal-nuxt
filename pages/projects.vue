@@ -1,7 +1,8 @@
 <template>
     <h1 class="title">{{ title[language] }}</h1>
     <p v-if="language == 'en'">Personal projects I've worked on and work I've done for clients.</p>
-    <p v-if="language == 'nl'">Persoonlijke projecten waar ik aan heb gewerkt en werk dat ik heb gedaan voor klanten.</p>
+    <p v-if="language == 'nl'">Persoonlijke projecten waar ik aan heb gewerkt en werk dat ik heb gedaan voor klanten.
+    </p>
 
     <div class="demos">
         <Demo :data="project" v-for="project in projects"></Demo>
@@ -15,7 +16,7 @@ import { useLanguageStore } from "~/store/language.js";
 
 
 definePageMeta({
-  layout: "fullscreen",
+    layout: "fullscreen",
 });
 
 
@@ -109,7 +110,7 @@ export default {
                         en: "Provenreach",
                         nl: "Provenreach"
                     },
-                    
+
                     description: {
                         en: "This was a website I made for an online marketing consulting agency, it's made in basic wordpress by request",
                         nl: "Dit was een website die ik heb gemaakt voor een online marketingadviesbureau, op verzoek gemaakt in standaard WordPress"
@@ -125,11 +126,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.title {
-    font-size: 3rem;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
-}
-
-
-</style>
+<style lang="scss" scoped></style>

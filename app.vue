@@ -1,7 +1,7 @@
 <template>
-    <NuxtLayout>
-        
-    </NuxtLayout>
+  <NuxtLayout>
+
+  </NuxtLayout>
 </template>
 
 <script setup>
@@ -18,26 +18,12 @@ useHead({
 
 <style lang="scss">
 p {
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-a {
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    
-    &:hover {
-        color: $active-color;
-    }
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    font-size: 2rem;
-    
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 }
-
 </style>

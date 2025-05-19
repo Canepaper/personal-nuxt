@@ -20,14 +20,35 @@
 // 	z-index: -1;
 // 	pointer-events: none;
 //   }
-  
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalam', cursive;
+}
 
 body {
     margin: 0;
-    color: $text-color;
-    font-family: 'Kalam', cursive;
+    color: $text-light;
     box-sizing: border-box;
     background-color: #262626;
+    font-family: 'Kalam', cursive;
+
+}
+
+a {
+	text-decoration: none;
+	color: $primary-color;
+	font-weight: bolder;
+	font-size: 1.2rem;
+	font-family: 'Roboto', sans-serif;
+
+	&:hover {
+		color: $highlight;
+	}
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
 }
 
 ::-webkit-scrollbar
@@ -38,13 +59,13 @@ body {
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: $text-color;
+	background-color: $text-light;
 
 }
 
 .buttonSelected {
-    background-color: $text-color !important;
-    color: $page !important;
+    background-color: $text-light !important;
+    color: $bg-light !important;
 }
 
 .socials {
