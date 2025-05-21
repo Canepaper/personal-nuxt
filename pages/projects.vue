@@ -1,5 +1,5 @@
 <template>
-    <h1 class="title">{{ title[language] }}</h1>
+    <h1 class="fullscreen-title">{{ title[language] }}</h1>
     <p v-if="language == 'en'">Personal projects I've worked on and work I've done for clients.</p>
     <p v-if="language == 'nl'">Persoonlijke projecten waar ik aan heb gewerkt en werk dat ik heb gedaan voor klanten.
     </p>

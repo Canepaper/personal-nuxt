@@ -1,8 +1,6 @@
 <template>
 	<h1 class="fullscreen-title">{{ title[language] }}</h1>
 
-	<h2>Demos</h2>
-
 	<p v-if="language == 'en'">
 		A collection of demos I made to showcase my skills.
 	</p>
@@ -124,6 +122,21 @@ export default {
 			},
 
 			demos: [
+				{
+					title: {
+						en: "Vuetify Quiz",
+						nl: "Vuetify Quiz"
+					},
+
+					description: {
+						en: "A quiz app made with Vuetify and a quiz API",
+						nl: "Een quiz app gemaakt met Vuetify en een quiz API"
+					},
+
+					link: "https://quiz.j-web.dev",
+
+					image: "quiz.png"
+				},
 				{
 					title: {
 						en: "Image gallery",

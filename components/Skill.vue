@@ -20,7 +20,6 @@ export default {
 <style scoped lang="scss">
 .skill {
 
-
 	display: flex;
 	flex-direction: column;
 
